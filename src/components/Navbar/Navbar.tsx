@@ -2,21 +2,22 @@ import styles from "./Navbar.module.scss";
 import logo from "../../assets/logo.png";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div className={styles.container}>
-      <a href="" className={styles.logo}>
+      <Link to="/" className={styles.logo}>
         <img src={logo} alt="Company Logo" />
-      </a>
+      </Link>
 
       <nav className={styles.navbar}>
         <ul>
           <li>
-            <a href="">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="">About us</a>
+            <Link to="/about">About us</Link>
           </li>
           <li className={styles.dropdown}>
             <div>
@@ -26,18 +27,18 @@ const Navbar = () => {
               </div>
               <div className={styles["dropdown-content"]}>
                 <div>
-                  <a href="" className={styles["dropdown-content-1"]}>
+                  <Link to="" className={styles["dropdown-content-1"]}>
                     Become a Member
-                  </a>
-                  <a href="" className={styles["dropdown-content-2"]}>
+                  </Link>
+                  <Link to="" className={styles["dropdown-content-2"]}>
                     Member Directory
-                  </a>
-                  <a href="" className={styles["dropdown-content-3"]}>
+                  </Link>
+                  <Link to="" className={styles["dropdown-content-3"]}>
                     Member Benefits
-                  </a>
-                  <a href="" className={styles["dropdown-content-4"]}>
+                  </Link>
+                  <Link to="" className={styles["dropdown-content-4"]}>
                     Member Resources
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -50,17 +51,17 @@ const Navbar = () => {
               </div>
               <div className={styles["dropdown-content"]}>
                 <div>
-                  <a href="">News</a>
-                  <a href="">Events</a>
+                  <Link to="">News</Link>
+                  <Link to="/event">Events</Link>
                 </div>
               </div>
             </div>
           </li>
           <li>
-            <a href="">Products</a>
+            <Link to="">Products</Link>
           </li>
           <li>
-            <a href="">Contact us</a>
+            <Link to="">Contact us</Link>
           </li>
         </ul>
       </nav>
