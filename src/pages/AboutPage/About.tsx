@@ -15,7 +15,7 @@ function About() {
             <main>
                 <section className='sect1'>
                     <div className='sect1Text'>
-                        <h3>WHO ARE WE?</h3>
+                        <h3>WHO ARE WE ?</h3>
                         <p>
                             The Manufacturers Association of Nigeria Export
                             Promotion Group – MANEG is a group of Nigerian
