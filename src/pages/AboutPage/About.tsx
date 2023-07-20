@@ -1,12 +1,12 @@
-import groupImg from '../assets/group-img.png';
-import aboutImg1 from '../assets/about-img.png';
-import aboutImg2 from '../assets/about-img2.png';
-import aboutImg3 from '../assets/about-img3.png';
-import aboutImg4 from '../assets/about-img4.png';
-import aboutImg5 from '../assets/about-img5.png';
-import arrowRight from '../assets/arrow-right.png';
+import groupImg from '../../assets/group-img.png';
+import aboutImg1 from '../../assets/about-img.png';
+import aboutImg2 from '../../assets/about-img2.png';
+import aboutImg3 from '../../assets/about-img3.png';
+import aboutImg4 from '../../assets/about-img4.png';
+import aboutImg5 from '../../assets/about-img5.png';
+import arrowRight from '../../assets/arrow-right.png';
 
-import '../styles/about.scss';
+import './about.scss';
 
 function About() {
     return (

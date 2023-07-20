@@ -23,7 +23,6 @@
     align-items: center;
     justify-content: center;
     .leftHelp {
-        border: 1px solid black;
         width: 50%;
         display: flex;
         img {
@@ -31,8 +30,6 @@
         }
     }
     .rightHelp {
-        border: 1px solid black;
-
         width: 50%;
         display: flex;
         flex-direction: column;
@@ -59,8 +56,6 @@
             font-size: 1.5rem;
         }
         .leftHistory {
-            border: 1px solid black;
-
             padding-left: 2em;
             width: 50%;
             display: flex;
@@ -73,8 +68,6 @@
             }
         }
         .rightHistory {
-            border: 1px solid black;
-
             display: flex;
         }
     }
