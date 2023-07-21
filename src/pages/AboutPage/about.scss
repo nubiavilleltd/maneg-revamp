@@ -4,71 +4,149 @@
     box-sizing: border-box;
 }
 .sect1 {
-    margin-top: 2em;
+    // margin-top: 2em;
+    padding-left: 2em;
     display: flex;
-    height: 70vh;
+    height: 100vh;
     align-items: center;
     justify-content: space-between;
-
-    img {
-        max-width: 60%;
+    @media (max-width: 1020px) {
+        height: auto;
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+    .sect1Text {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        @media (max-width: 1020px) {
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2em;
+        }
+        h3 {
+            font-weight: 700;
+            font-size: 1.7rem;
+        }
+        p {
+            width: 80%;
+            font-size: 0.9rem;
+            line-height: 1.7em;
+        }
+    }
+    .sect1img {
+        img {
+            max-width: 100%;
+        }
+        @media (max-width: 518px) {
+            max-width: 70%;
+        }
     }
 }
 .sect2 {
-    margin-top: 2em;
-    padding-left: 2em;
+    margin: 2em 0 2em 0;
     display: flex;
-    height: 60vh;
+    height: 80vh;
     justify-content: space-between;
     align-items: center;
     justify-content: center;
+    @media (max-width: 1020px) {
+        height: auto;
+        flex-direction: column;
+    }
     .leftHelp {
-        width: 50%;
+        width: 60%;
         display: flex;
+        @media (max-width: 1020px) {
+            width: 100%;
+        }
         img {
-            max-width: 70%;
+            max-width: 100%;
+            @media (max-width: 518px) {
+                max-width: 70%;
+                display: block;
+                margin-right: auto;
+                margin-left: auto;
+            }
         }
     }
     .rightHelp {
         width: 50%;
+        margin-left: 4em;
         display: flex;
         flex-direction: column;
         gap: 1em;
+        @media (max-width: 1020px) {
+            width: 100%;
+            margin: 2em 0;
+            align-items: center;
+        }
         h3 {
             font-weight: 700;
+            font-size: 1.7rem;
         }
         p {
             width: 80%;
-            font-size: 1.1rem;
+            font-size: 0.9rem;
+            line-height: 1.7em;
         }
     }
 }
 .sect3Container {
     background-color: #0c6748;
-    height: 70vh;
+    height: 100vh;
+    @media (max-width: 1020px) {
+        height: auto;
+    }
     .sect3 {
         display: flex;
         height: 50vh;
         color: white;
         justify-content: space-between;
+        @media (max-width: 1020px) {
+            height: auto;
+            flex-direction: column-reverse;
+        }
         h3 {
             font-weight: 700;
-            font-size: 1.5rem;
+            font-size: 1.7rem;
         }
         .leftHistory {
+            margin-top: 5em;
             padding-left: 2em;
             width: 50%;
             display: flex;
             flex-direction: column;
             gap: 1em;
             justify-content: center;
+            align-content: center;
+            @media (max-width: 1020px) {
+                width: 100%;
+                padding: 0;
+                align-items: center;
+                margin: 2em 0;
+            }
             p {
                 width: 80%;
-                font-size: 1.1rem;
+                font-size: 0.9rem;
+                line-height: 1.7em;
             }
         }
         .rightHistory {
-            display: flex;
+            img {
+                width: 80%;
+                @media (max-width: 1020px) {
+                    width: 100%;
+                }
+                @media (max-width: 518px) {
+                    max-width: 70%;
+                    display: block;
+                    margin-right: auto;
+                    margin-left: auto;
+                }
+            }
         }
     }
 }
@@ -80,9 +158,13 @@
     color: white;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 1020px) {
+        height: auto;
+        flex-direction: column-reverse;
+    }
     h3 {
         font-weight: 700;
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
     .leftLead {
         width: 50%;
@@ -90,9 +172,15 @@
         flex-direction: column;
         gap: 1em;
         padding-left: 2em;
+        @media (max-width: 1020px) {
+            width: 100%;
+            align-items: center;
+            margin: 2em 0;
+        }
         p {
             width: 80%;
-            font-size: 1.1rem;
+            font-size: 0.9rem;
+            line-height: 1.7em;
         }
     }
     .rightLead {
@@ -106,6 +194,7 @@
             text-align: center;
             p {
                 margin: 0.4em;
+                line-height: 1.7em;
             }
         }
     }
@@ -120,6 +209,9 @@
         img {
             width: 12px;
             padding: 0.2em;
+            @media (max-width: 518px) {
+                max-width: 70%;
+            }
         }
     }
 }
@@ -133,30 +225,42 @@
         text-align: center;
         h3 {
             margin: 2em;
-            font-size: 1.5rem;
+            font-size: 1.7rem;
         }
         p {
             width: 80%;
-            font-size: 1.1rem;
+            font-size: 0.9rem;
             margin: 1em;
             margin: 0 auto 0 auto;
+            line-height: 1.7em;
         }
     }
     .achievers {
         display: flex;
         margin: 3em 0 2em 0;
+        @media (max-width: 1020px) {
+            height: auto;
+            flex-direction: column;
+        }
         div {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: left;
+            @media (max-width: 1020px) {
+                margin: 2em 0;
+            }
             img {
                 width: 500px;
+                @media (max-width: 518px) {
+                    max-width: 70%;
+                }
             }
             p {
                 margin-top: 1em;
                 width: 80%;
-                font-size: 1.1rem;
+                font-size: 0.9rem;
+                line-height: 1.7em;
             }
         }
     }
@@ -166,13 +270,14 @@
         h3 {
             font-weight: 700;
             margin: 1em 0 1em 0;
-            font-size: 1.5rem;
+            font-size: 1.7rem;
         }
         p {
             width: 70%;
-            font-size: 1.1rem;
+            font-size: 0.9rem;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.7em;
         }
     }
     button {
@@ -186,6 +291,9 @@
         img {
             width: 10px;
             padding: 0.2em;
+            @media (max-width: 518px) {
+                max-width: 70%;
+            }
         }
     }
 }
