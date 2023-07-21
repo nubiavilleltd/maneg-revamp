@@ -17,6 +17,12 @@ html {
   flex-direction: $direction;
 }
 
+@mixin container() {
+  max-width: 1300px;
+  margin: auto;
+  width: 85%;
+}
+
 body {
   background: #f5f5f5;
   font-family: "Montserrat", sans-serif;
