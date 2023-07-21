@@ -2,9 +2,25 @@
 
 .container {
   @include flexContainer(center, space-between, row);
-  background: #ffffff;
-  width: 100vw;
+  // background: #ffffff;
   padding: 0rem 4rem;
+  transition: background 0.5s ease;
+
+  .navbar li {
+    padding: 0.3rem;
+
+    &:hover {
+      border-bottom: 2px solid black;
+    }
+  }
+
+  &.scrolled {
+    position: sticky;
+    top: 0;
+    background-color: $primaryColor;
+    color: #fff;
+    z-index: 1;
+  }
 
   .logo {
     width: 80px;
@@ -24,9 +40,13 @@
       list-style-type: none;
       font-size: 0.9rem;
       font-weight: 500;
+
       a {
         text-decoration: none;
         color: black;
+        &.scrolledLink {
+          color: #fff;
+        }
       }
     }
   }

@@ -3,10 +3,33 @@ import logo from "../../assets/logo.png";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const scrollClasses = isScrolled
+    ? `${styles.container} ${styles.scrolled}`
+    : `${styles.container}`;
+
   return (
-    <div className={styles.container}>
+    <div className={scrollClasses}>
       <Link to="/" className={styles.logo}>
         <img src={logo} alt="Company Logo" />
       </Link>
@@ -14,10 +37,17 @@ const Navbar = () => {
       <nav className={styles.navbar}>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" className={isScrolled ? `${styles.scrolledLink}` : ""}>
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/about">About us</Link>
+            <Link
+              to="/about"
+              className={isScrolled ? `${styles.scrolledLink}` : ""}
+            >
+              About us
+            </Link>
           </li>
           <li className={styles.dropdown}>
             <div>
@@ -58,10 +88,14 @@ const Navbar = () => {
             </div>
           </li>
           <li>
-            <Link to="">Products</Link>
+            <Link to="" className={isScrolled ? `${styles.scrolledLink}` : ""}>
+              Products
+            </Link>
           </li>
           <li>
-            <Link to="">Contact us</Link>
+            <Link to="" className={isScrolled ? `${styles.scrolledLink}` : ""}>
+              Contact us
+            </Link>
           </li>
         </ul>
       </nav>

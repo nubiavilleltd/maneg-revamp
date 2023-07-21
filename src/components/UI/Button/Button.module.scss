@@ -1,5 +1,9 @@
+@import "../../../../index";
+
 button {
   border: 0;
-  background-color: black;
+  background-color: #0c6748;
   color: white;
+  font-family: $titleFont;
+  cursor: pointer;
 }
