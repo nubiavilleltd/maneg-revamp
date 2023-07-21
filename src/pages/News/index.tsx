@@ -29,10 +29,13 @@ export default function News() {
         </div>
 
         {searchQuery && (
-          <h3 style={{ textAlign: "center", marginBottom: "1rem" }}>
-            Seach results for{" "}
-            <span style={{ color: "#21976f" }}>'{searchQuery}'</span>
-          </h3>
+          <>
+            <h3 style={{ textAlign: "center", marginBottom: "1rem" }}>
+              Seach results for{" "}
+              <span style={{ color: "#21976f" }}>'{searchQuery}' </span>
+              <span>({allNews.length} results)</span>
+            </h3>
+          </>
         )}
 
         {searchQuery && allNews.length === 0 ? (
