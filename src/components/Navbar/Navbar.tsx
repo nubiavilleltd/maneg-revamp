@@ -51,7 +51,7 @@ const Navbar = () => {
               </div>
               <div className={styles["dropdown-content"]}>
                 <div>
-                  <Link to="">News</Link>
+                  <Link to="/news">News</Link>
                   <Link to="/event">Events</Link>
                 </div>
               </div>
