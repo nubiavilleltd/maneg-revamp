@@ -22,10 +22,28 @@ html {
   flex-direction: $direction;
 }
 
+@mixin container() {
+  max-width: 1250px;
+  margin: auto;
+  // width: 95%;
+}
+
+@mixin grid($tempCol, $gap) {
+  display: grid;
+  grid-template-columns: $tempCol;
+  gap: $gap;
+}
+
 body {
   background: #e0f0e3;
   font-family: $headingFont;
   @include flexContainer(center, center, row);
   // overflow-x: hidden;
   // border: 2px solid green;
+}
+
+input,
+textarea,
+select {
+  font-family: "Montserrat", sans-serif;
 }
