@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer';
 import News from './pages/News';
 import NewsDetails from './components/news/NewsDetails';
 import ScrollToTop from './utils/ScrollToTop';
+import EventDetail from './components/EventCard/EventDetail';
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                     <Route path='/event' element={<Event />} />
                     <Route path='/news' element={<News />} />
                     <Route path='/news/:newsID' element={<NewsDetails />} />
+                    <Route path='/event/:eventId' element={<EventDetail />} />
                 </Routes>
                 <Footer />
             </BrowserRouter>
