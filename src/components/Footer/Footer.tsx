@@ -14,6 +14,11 @@ import {
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  // Create a new Date object
+const currentDate = new Date();
+
+// Get the current year from the Date object
+const currentYear = currentDate.getFullYear();
   return (
     <section className={styles.wrapper}>
       <div className={styles["footer-container"]}>
@@ -96,7 +101,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="" className={styles.link}>
+                <Link to="/products" className={styles.link}>
                   Products
                 </Link>
               </li>
@@ -140,7 +145,7 @@ const Footer = () => {
           </div>
         </div>
         <div className={styles.copyright}>
-          &copy; 2022 MANEG, All Rights Reserved | Privacy Policy, Terms of
+          &copy; {currentYear} MANEG, All Rights Reserved | Privacy Policy, Terms of
           Service & Cookie settings
         </div>
       </div>
