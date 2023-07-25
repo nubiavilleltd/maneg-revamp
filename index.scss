@@ -2,6 +2,7 @@
 $primaryColor: #0c6748;
 $secondaryColor: #21976f;
 $accentColor: #4f2109;
+$accentColor2: #18a3c9;
 $headingFont: "Lora";
 $titleFont: "Lora";
 
@@ -37,7 +38,7 @@ html {
 body {
   background: #e0f0e3;
   font-family: $headingFont;
-  @include flexContainer(center, center, row);
+  // @include flexContainer(center, center, row);
   // overflow-x: hidden;
   // border: 2px solid green;
 }
@@ -45,5 +46,5 @@ body {
 input,
 textarea,
 select {
-  font-family: "Montserrat", sans-serif;
+  font-family: $titleFont, sans-serif;
 }

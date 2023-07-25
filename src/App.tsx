@@ -8,6 +8,8 @@ import Footer from "./components/Footer/Footer";
 import News from "./pages/News";
 import NewsDetails from "./components/news/NewsDetails";
 import ScrollToTop from "./utils/ScrollToTop";
+import Contact from "./pages/ContactPage/Contact";
+import MemberDirectory from "./pages/MemberDirectory/MemberDirectory";
 
 function App() {
   return (
@@ -18,9 +20,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/directory" element={<MemberDirectory />} />
           <Route path="/event" element={<Event />} />
           <Route path="/news" element={<News />} />
           <Route path="/news/:newsID" element={<NewsDetails />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -60,7 +60,10 @@ const Navbar = () => {
                   <Link to="" className={styles["dropdown-content-1"]}>
                     Become a Member
                   </Link>
-                  <Link to="" className={styles["dropdown-content-2"]}>
+                  <Link
+                    to="/directory"
+                    className={styles["dropdown-content-2"]}
+                  >
                     Member Directory
                   </Link>
                   <Link to="" className={styles["dropdown-content-3"]}>
@@ -93,7 +96,10 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="" className={isScrolled ? `${styles.scrolledLink}` : ""}>
+            <Link
+              to="/contact"
+              className={isScrolled ? `${styles.scrolledLink}` : ""}
+            >
               Contact us
             </Link>
           </li>

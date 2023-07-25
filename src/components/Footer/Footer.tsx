@@ -30,7 +30,7 @@ const Footer = () => {
             <div className={styles.social}>
               <ul>
                 <li>
-                  <Link to="www.facebook.com">
+                  <Link to="http://www.facebook.com">
                     <FontAwesomeIcon
                       icon={faFacebook}
                       style={{ color: "#0f67ff" }}
@@ -39,7 +39,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="www.twitter.com">
+                  <Link to="http://www.twitter.com">
                     <FontAwesomeIcon
                       icon={faTwitter}
                       style={{ color: "#196af5" }}
@@ -48,7 +48,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="www.instagram.com">
+                  <Link to="http://www.instagram.com">
                     <FontAwesomeIcon
                       icon={faInstagram}
                       className={`${styles["social-icon"]} ${styles.instagram}`}
@@ -61,7 +61,7 @@ const Footer = () => {
           <div className={styles["second-col"]}>
             <ul>
               <li>
-                <Link to="" className={styles.link}>
+                <Link to="/about" className={styles.link}>
                   About us
                 </Link>
               </li>
@@ -81,27 +81,27 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="" className={styles.link}>
+                <Link to="/directory" className={styles.link}>
                   Member Directory
                 </Link>
               </li>
               <li>
-                <Link to="" className={styles.link}>
+                <Link to="/news" className={styles.link}>
                   News
                 </Link>
               </li>
               <li>
-                <Link to="" className={styles.link}>
+                <Link to="/event" className={styles.link}>
                   Events
                 </Link>
               </li>
               <li>
-                <Link to="" className={styles.link}>
+                <Link to="/product" className={styles.link}>
                   Products
                 </Link>
               </li>
               <li>
-                <Link to="" className={styles.link}>
+                <Link to="/contact" className={styles.link}>
                   Contact us
                 </Link>
               </li>

@@ -1,6 +1,6 @@
 import styles from "./Home.module.scss";
 import Button from "../../components/UI/Button/Button";
-import heroImg from "../../assets/hero-image.jpg";
+// import heroImg from "../../assets/hero-image.jpg";
 // import cacLogo from "../../assets/cac_logo.png";
 // import manLogo from "../../assets/man_logo2 (1).png";
 import aboutImg from "../../assets/about-hero-img.jpg";
@@ -10,6 +10,8 @@ import hero from "../../assets/about-img-landscape.jpg";
 import plant from "../../assets/plant.jpg";
 // import logo from "../../assets/logo.png";
 // import { Link } from "react-router-dom";
+import newsletterImg from "../../assets/newsletter.jpg";
+import exportVideo from "../../assets/export.mp4";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowRight,
@@ -21,6 +23,8 @@ import {
 import Questions from "./Questions";
 import { service } from "./service";
 import CountUp from "react-countup";
+import Newsletter from "./Newsletter/Newsletter";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -43,13 +47,18 @@ const Home = () => {
           </Button>
           <div className={styles.talk}>
             Let's Talk
-            <Button type="button" className={styles.circleBtn}>
-              <FontAwesomeIcon icon={faArrowRight} />
-            </Button>
+            <Link to="/contact">
+              <Button type="button" className={styles.circleBtn}>
+                <FontAwesomeIcon icon={faArrowRight} />
+              </Button>
+            </Link>
           </div>
         </div>
         <div className={styles["hero-image"]}>
-          <img src={heroImg} loading="lazy" alt="hero-image" />
+          {/* <img src={heroImg} loading="lazy" alt="hero-image" /> */}
+          <video autoPlay controls loop>
+            <source src={exportVideo} type="video/mp4" />
+          </video>
         </div>
       </div>
       {/* <div className={styles["hero-logo"]}>
@@ -305,14 +314,15 @@ const Home = () => {
       <section className={styles.quote}>
         <blockquote>Be a part of a growing Nigerian Economy</blockquote>
       </section>
-      {/* <section className={styles.newsletter}>
-        <div>
-          <img src={} alt="" />
+      <section className={styles.newsletter}>
+        <div className={styles["newsletter-image"]}>
+          <img src={newsletterImg} alt="about" />
         </div>
-        <div>
-          <form></form>
+        <div className={styles["newsletter-content"]}>
+          <h3>Join our Newsletter</h3>
+          <Newsletter />
         </div>
-      </section> */}
+      </section>
     </>
   );
 };
