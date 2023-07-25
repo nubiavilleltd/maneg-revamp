@@ -1,18 +1,36 @@
-import eventImg from "../../assets/event-img.png";
-import "./eventCard.scss";
+import {Link} from 'react-router-dom';
+import './eventCard.scss';
 
-function EventCard() {
-  return (
-    <>
-      <main className="eventCard">
-        <img src={eventImg} alt="img" />
-        <div className="cardInfo">
-          <h4>Food Hunt Lagos</h4>
-          <a href="#">Click to read more</a>
-        </div>
-      </main>
-    </>
-  );
+interface EventCardProps {
+    title: string;
+    eventId: number;
+    imgSrc: string;
+}
+function EventCard(props: EventCardProps) {
+    const {title, eventId, imgSrc} = props;
+
+    return (
+        <>
+            <Link to={`/event/${eventId}`} style={{textDecoration: 'none'}}>
+                <main className='eventCard'>
+                    <img src={imgSrc} alt='img' />
+                    <div className='cardInfo'>
+                        <h4 style={{color: 'black'}}>{title}</h4>
+                        <p
+                            style={{
+                                fontSize: '0.8rem',
+                                color: 'black',
+                                paddingTop: '0.5em',
+                                paddingBottom: '0.5em',
+                            }}
+                        >
+                            Click to read more
+                        </p>
+                    </div>
+                </main>
+            </Link>
+        </>
+    );
 }
 
 export default EventCard;
