@@ -88,7 +88,7 @@ const Navbar = () => {
             </div>
           </li>
           <li>
-            <Link to="" className={isScrolled ? `${styles.scrolledLink}` : ""}>
+            <Link to="/products" className={isScrolled ? `${styles.scrolledLink}` : ""}>
               Products
             </Link>
           </li>

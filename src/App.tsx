@@ -8,6 +8,7 @@ import Footer from "./components/Footer/Footer";
 import News from "./pages/News";
 import NewsDetails from "./components/news/NewsDetails";
 import ScrollToTop from "./utils/ScrollToTop";
+import Products from "./pages/Products/products";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/event" element={<Event />} />
           <Route path="/news" element={<News />} />
+          <Route path="/products" element={<Products />} />
           <Route path="/news/:newsID" element={<NewsDetails />} />
         </Routes>
         <Footer />
