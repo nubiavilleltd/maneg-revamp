@@ -10,6 +10,7 @@ import NewsDetails from './components/news/NewsDetails';
 import ScrollToTop from './utils/ScrollToTop';
 import EventDetail from './components/EventCard/EventDetail';
 import Products from './pages/Products/products';
+import BecomeMember from './pages/BecomeMember/BecomeMember';
 
 function App() {
     return (
@@ -22,9 +23,10 @@ function App() {
                     <Route path='/about' element={<About />} />
                     <Route path='/event' element={<Event />} />
                     <Route path='/news' element={<News />} />
+                    <Route path='/becomeMember' element={<BecomeMember />} />
                     <Route path='/news/:newsID' element={<NewsDetails />} />
                     <Route path='/event/:eventId' element={<EventDetail />} />
-                    <Route path='/products' element={<Products/>} />
+                    <Route path='/products' element={<Products />} />
                 </Routes>
                 <Footer />
             </BrowserRouter>
