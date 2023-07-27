@@ -1,0 +1,109 @@
+@import "../../../index.scss";
+
+.product {
+  background: #e0f0e3;
+
+  .wrapper {
+    // @include container();
+    padding: 6rem 4rem 8rem 4rem;
+
+    .heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 4rem 0;
+      background: rgba(217, 217, 217, 0.3);
+      border-radius: 1.25rem;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+
+      .search {
+        padding: 0.8rem 1.5rem;
+        border-radius: 0.6rem;
+        background: #fff;
+        outline: none;
+        font-size: 1rem;
+        font-weight: 700;
+      }
+    }
+
+    .cards__wrapper {
+      @include grid(repeat(3, 1fr), 1rem);
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .card__container {
+        max-width: 500px;
+        border-radius: 0.6rem;
+        overflow: hidden;
+        border: 0.1px solid #ececec;
+        -moz-osx-font-smoothing: grayscale;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        transition: transform .5s ease-out;
+
+        :hover, :focus {
+          
+          transform: scale(1.05);
+          
+      }
+      
+      :active {
+          transform: scale(.9);
+      }
+        
+        .image {
+          max-height: 250px;
+          width: 100%;
+          object-fit: cover;
+          
+        }
+
+        .title {
+          color: #000;
+          font-family: Montserrat;
+          font-size: 1.25rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+
+        .content__wrap {
+          background-color: #e0f0e3;
+          // max-width: 82%;
+          text-align: center;
+          padding: 1rem;
+        
+        
+        :active {
+            transform: scale(.9);
+        }
+          .content {
+            margin: 1rem 0;
+            line-height: 1.8;
+            font-weight: 500;
+            color: #888888;
+          }
+
+          .date {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #21976f;
+            font-weight: 700;
+          }
+        }
+        
+        
+      }
+      .card__container:hover,  .card__container:focus {
+          
+        transform: scale(1.05);
+        
+    }
+     
+    }
+  }
+}
