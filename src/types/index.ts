@@ -14,3 +14,10 @@ export interface Comment {
   createdAt: string;
   // likes: number;
 }
+
+export interface Products {
+  id: number;
+  image: string;
+  title: string;
+ 
+}
