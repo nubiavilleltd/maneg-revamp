@@ -18,6 +18,7 @@ import partner8 from '/assets/partner8.png';
 import partner9 from '/assets/partner9.png';
 import partner10 from '/assets/partner10.png';
 import partner11 from '/assets/partner11.png';
+import Transition from '../../utils/Transistion/Transition';
 
 function BecomeMember() {
     const [showParagraph1, setShowParagraph1] = useState(true);
@@ -263,4 +264,8 @@ function BecomeMember() {
     );
 }
 
-export default BecomeMember;
+const TransitionBecomeMember = () => {
+    return <Transition OgComponent={<BecomeMember />} />;
+};
+
+export default TransitionBecomeMember;

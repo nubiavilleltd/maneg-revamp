@@ -17,6 +17,7 @@ import TransitionMemberBenefits from './pages/MemberBenefits/MemberBenefits';
 import TransitionMemberProfile from './pages/MemberProfile/MemberProfile';
 import {useState, useEffect} from 'react';
 import {AnimatePresence} from 'framer-motion';
+import TransitionBecomeMember from './pages/BecomeMember/BecomeMember';
 
 function App() {
     const [loading, setLoading] = useState<boolean>(true);
@@ -70,6 +71,10 @@ function App() {
                             <Route
                                 path='/products'
                                 element={<TransitionProducts />}
+                            />
+                            <Route
+                                path='/becomeMember'
+                                element={<TransitionBecomeMember />}
                             />
                             <Route
                                 path='/contact'
