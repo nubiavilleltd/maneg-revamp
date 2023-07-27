@@ -3,8 +3,9 @@ import styles from "./news.module.scss";
 import { Link } from "react-router-dom";
 import { MdOutlineDateRange } from "react-icons/md";
 import { useEffect, useState } from "react";
+import Transition from "../../utils/Transistion/Transition";
 
-export default function News() {
+const News = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [allNews, setAllNews] = useState(newsData);
 
@@ -75,4 +76,10 @@ export default function News() {
       </div>
     </section>
   );
-}
+};
+
+const TransitionNews = () => {
+  return <Transition OgComponent={<News />} />;
+};
+
+export default TransitionNews;
