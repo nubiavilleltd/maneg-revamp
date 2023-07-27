@@ -20,25 +20,50 @@ import partner10 from '/assets/partner10.png';
 import partner11 from '/assets/partner11.png';
 import Transition from '../../utils/Transistion/Transition';
 
+const paragraphsData = [
+    {
+        id: 'paragraph1',
+        title: 'International Recognition',
+        content:
+            'MANEG is a member of the Federal Ministry of Foreign Affairs’ National Approval Committee for ETLS in Nigeria. We serve in several committees on non-oil and economic diversification in Nigeria and the ECOWAS.',
+    },
+    {
+        id: 'paragraph2',
+        title: 'Government support',
+        content:
+            'MANEG is a member of the Federal Ministry of Foreign Affairs’ National Approval Committee for ETLS in Nigeria. We serve in several committees on non-oil and economic diversification in Nigeria and the ECOWAS.',
+    },
+    {
+        id: 'paragraph3',
+        title: 'EEG & ETLS Incentives',
+        content:
+            'MANEG is a member of the Federal Ministry of Foreign Affairs’ National Approval Committee for ETLS in Nigeria. We serve in several committees on non-oil and economic diversification in Nigeria and the ECOWAS.',
+    },
+    {
+        id: 'paragraph4',
+        title: 'Economic Diversification',
+        content:
+            'MANEG is a member of the Federal Ministry of Foreign Affairs’ National Approval Committee for ETLS in Nigeria. We serve in several committees on non-oil and economic diversification in Nigeria and the ECOWAS.',
+    },
+];
+
 function BecomeMember() {
-    const [showParagraph1, setShowParagraph1] = useState(true);
-    const [showParagraph2, setShowParagraph2] = useState(true);
-    const [showParagraph3, setShowParagraph3] = useState(true);
-    const [showParagraph4, setShowParagraph4] = useState(true);
+    const [showParagraphs, setShowParagraphs] = useState<
+        Record<string, boolean>
+    >(() =>
+        paragraphsData.reduce(
+            (acc, paragraph) => ({...acc, [paragraph.id]: false}),
+            {},
+        ),
+    );
 
-    const toggleParagraph1 = () => {
-        setShowParagraph1((prevState) => !prevState);
+    const toggleParagraph = (id: string) => {
+        setShowParagraphs((prevState) => ({
+            ...Object.fromEntries(paragraphsData.map(({id}) => [id, false])),
+            [id]: !prevState[id],
+        }));
     };
 
-    const toggleParagraph2 = () => {
-        setShowParagraph2((prevState) => !prevState);
-    };
-    const toggleParagraph3 = () => {
-        setShowParagraph3((prevState) => !prevState);
-    };
-    const toggleParagraph4 = () => {
-        setShowParagraph4((prevState) => !prevState);
-    };
     return (
         <div className='memberContainer'>
             <div className='memberBanner'>
@@ -111,92 +136,33 @@ function BecomeMember() {
                 <h2>WHY SHOULD YOU JOIN MANEG?</h2>
                 <div className='whyContainer'>
                     <div className='whyLeft'>
-                        <div style={{display: 'flex', gap: '1em'}}>
-                            <div onClick={toggleParagraph1}>
-                                <img
-                                    src={showParagraph1 ? minus : plus}
-                                    alt='img'
-                                />
+                        {paragraphsData.map((paragraph) => (
+                            <div
+                                key={paragraph.id}
+                                style={{display: 'flex', gap: '1em'}}
+                            >
+                                <div
+                                    onClick={() =>
+                                        toggleParagraph(paragraph.id)
+                                    }
+                                >
+                                    <img
+                                        src={
+                                            showParagraphs[paragraph.id]
+                                                ? minus
+                                                : plus
+                                        }
+                                        alt='img'
+                                    />
+                                </div>
+                                <div>
+                                    <h3>{paragraph.title}</h3>
+                                    {showParagraphs[paragraph.id] && (
+                                        <p>{paragraph.content}</p>
+                                    )}
+                                </div>
                             </div>
-                            <div>
-                                <h3>International Recognition</h3>
-                                {showParagraph1 && (
-                                    <p>
-                                        MANEG is a member of the Federal
-                                        Ministry of Foreign Affairs’ National
-                                        Approval Committee for ETLS in Nigeria.
-                                        We serve in several committees on
-                                        non-oil and economic diversification in
-                                        Nigeria and the ECOWAS.
-                                    </p>
-                                )}
-                            </div>
-                        </div>
-                        <div style={{display: 'flex', gap: '1em'}}>
-                            <div onClick={toggleParagraph2}>
-                                <img
-                                    src={showParagraph2 ? minus : plus}
-                                    alt='img'
-                                />
-                            </div>
-                            <div>
-                                <h3>Government support</h3>
-                                {showParagraph2 && (
-                                    <p>
-                                        MANEG is a member of the Federal
-                                        Ministry of Foreign Affairs’ National
-                                        Approval Committee for ETLS in Nigeria.
-                                        We serve in several committees on
-                                        non-oil and economic diversification in
-                                        Nigeria and the ECOWAS.
-                                    </p>
-                                )}
-                            </div>
-                        </div>
-                        <div style={{display: 'flex', gap: '1em'}}>
-                            <div onClick={toggleParagraph3}>
-                                <img
-                                    src={showParagraph3 ? minus : plus}
-                                    alt='img'
-                                />
-                            </div>
-                            <div>
-                                <h3 style={{marginBottom: '1em'}}>
-                                    EEG & ETLS Incentives
-                                </h3>
-                                {showParagraph3 && (
-                                    <p>
-                                        MANEG is a member of the Federal
-                                        Ministry of Foreign Affairs’ National
-                                        Approval Committee for ETLS in Nigeria.
-                                        We serve in several committees on
-                                        non-oil and economic diversification in
-                                        Nigeria and the ECOWAS.
-                                    </p>
-                                )}
-                            </div>
-                        </div>
-                        <div style={{display: 'flex', gap: '1em'}}>
-                            <div onClick={toggleParagraph4}>
-                                <img
-                                    src={showParagraph4 ? minus : plus}
-                                    alt='img'
-                                />{' '}
-                            </div>
-                            <div>
-                                <h3>Economic Diversification</h3>
-                                {showParagraph4 && (
-                                    <p>
-                                        MANEG is a member of the Federal
-                                        Ministry of Foreign Affairs’ National
-                                        Approval Committee for ETLS in Nigeria.
-                                        We serve in several committees on
-                                        non-oil and economic diversification in
-                                        Nigeria and the ECOWAS.
-                                    </p>
-                                )}
-                            </div>
-                        </div>
+                        ))}
                     </div>
                     <div className='whyRight'>
                         <img src={groupImg} alt='img ' />
