@@ -21,23 +21,35 @@ import partner11 from '/assets/partner11.png';
 import Transition from '../../utils/Transistion/Transition';
 
 function BecomeMember() {
-    const [showParagraph1, setShowParagraph1] = useState(true);
-    const [showParagraph2, setShowParagraph2] = useState(true);
-    const [showParagraph3, setShowParagraph3] = useState(true);
-    const [showParagraph4, setShowParagraph4] = useState(true);
+    const [showParagraph1, setShowParagraph1] = useState(false);
+    const [showParagraph2, setShowParagraph2] = useState(false);
+    const [showParagraph3, setShowParagraph3] = useState(false);
+    const [showParagraph4, setShowParagraph4] = useState(false);
 
     const toggleParagraph1 = () => {
         setShowParagraph1((prevState) => !prevState);
+        setShowParagraph3(false);
+        setShowParagraph2(false);
+        setShowParagraph4(false);
     };
 
     const toggleParagraph2 = () => {
         setShowParagraph2((prevState) => !prevState);
+        setShowParagraph3(false);
+        setShowParagraph1(false);
+        setShowParagraph4(false);
     };
     const toggleParagraph3 = () => {
         setShowParagraph3((prevState) => !prevState);
+        setShowParagraph1(false);
+        setShowParagraph2(false);
+        setShowParagraph4(false);
     };
     const toggleParagraph4 = () => {
         setShowParagraph4((prevState) => !prevState);
+        setShowParagraph3(false);
+        setShowParagraph2(false);
+        setShowParagraph1(false);
     };
     return (
         <div className='memberContainer'>
