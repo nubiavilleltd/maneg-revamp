@@ -1,0 +1,6 @@
+@import "../../../index";
+
+.benefit-body {
+  @include flexContainer(flex-start, center, row);
+  gap: 3rem;
+}

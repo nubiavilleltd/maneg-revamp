@@ -4,8 +4,9 @@ import styles from "./news.details.module.scss";
 import { MdOutlineDateRange } from "react-icons/md";
 import { News } from "../../types";
 import CommentSection from "../comments/CommentSection";
+import Transition from "../../utils/Transistion/Transition";
 
-export default function NewsDetails() {
+const NewsDetails = () => {
   const { newsID } = useParams();
 
   const currentNews: News | undefined = newsData.find(
@@ -64,4 +65,10 @@ export default function NewsDetails() {
       </div>
     </section>
   );
-}
+};
+
+const TransitionNewsDetails = () => {
+  return <Transition OgComponent={<NewsDetails />} />;
+};
+
+export default TransitionNewsDetails;

@@ -6,4 +6,9 @@ button {
   color: white;
   font-family: $titleFont;
   cursor: pointer;
+
+  &:hover {
+    border-radius: 25px;
+    background-color: hsl(160, 80%, 27%);
+  }
 }

@@ -10,6 +10,7 @@ import hero from "../../assets/about-img-landscape.jpg";
 import plant from "../../assets/plant.jpg";
 // import logo from "../../assets/logo.png";
 // import { Link } from "react-router-dom";
+import newsletterImg from "../../assets/newsletter.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowRight,
@@ -21,6 +22,9 @@ import {
 import Questions from "./Questions";
 import { service } from "./service";
 import CountUp from "react-countup";
+import Newsletter from "./Newsletter/Newsletter";
+import { Link } from "react-router-dom";
+import Transition from "../../utils/Transistion/Transition";
 
 const Home = () => {
   return (
@@ -43,42 +47,17 @@ const Home = () => {
           </Button>
           <div className={styles.talk}>
             Let's Talk
-            <Button type="button" className={styles.circleBtn}>
-              <FontAwesomeIcon icon={faArrowRight} />
-            </Button>
+            <Link to="/contact">
+              <Button type="button" className={styles.circleBtn}>
+                <FontAwesomeIcon icon={faArrowRight} />
+              </Button>
+            </Link>
           </div>
         </div>
         <div className={styles["hero-image"]}>
           <img src={heroImg} loading="lazy" alt="hero-image" />
         </div>
       </div>
-      {/* <div className={styles["hero-logo"]}>
-        <ul>
-          <li>
-            <Link to="" className={styles.logo}>
-              <img src={cacLogo} alt="Cooperate Assocation Council" />
-            </Link>
-          </li>
-          <li>
-            <Link to="" className={styles.logo}>
-              <img src={manLogo} alt="Manufacturers Assocaition of Nigeria" />
-            </Link>
-          </li>
-          <li>
-            <Link to="" className={styles.logo}>
-              <img
-                src={logo}
-                alt="Manufacturers Assocation of Nigeria Export Promotion Group"
-              />
-            </Link>
-          </li>
-          <li>
-            <Link to="" className={styles.logo}>
-              Nextportrade
-            </Link>
-          </li>
-        </ul>
-      </div> */}
 
       <section className={styles.support}>
         <div>
@@ -305,16 +284,21 @@ const Home = () => {
       <section className={styles.quote}>
         <blockquote>Be a part of a growing Nigerian Economy</blockquote>
       </section>
-      {/* <section className={styles.newsletter}>
-        <div>
-          <img src={} alt="" />
+      <section className={styles.newsletter}>
+        <div className={styles["newsletter-image"]}>
+          <img src={newsletterImg} alt="about" />
         </div>
-        <div>
-          <form></form>
+        <div className={styles["newsletter-content"]}>
+          <h3>Join our Newsletter</h3>
+          <Newsletter />
         </div>
-      </section> */}
+      </section>
     </>
   );
 };
 
-export default Home;
+const TransitionHome = () => {
+  return <Transition OgComponent={<Home />} />;
+};
+
+export default TransitionHome;

@@ -15,10 +15,10 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   // Create a new Date object
-const currentDate = new Date();
+  const currentDate = new Date();
 
-// Get the current year from the Date object
-const currentYear = currentDate.getFullYear();
+  // Get the current year from the Date object
+  const currentYear = currentDate.getFullYear();
   return (
     <section className={styles.wrapper}>
       <div className={styles["footer-container"]}>
@@ -35,7 +35,7 @@ const currentYear = currentDate.getFullYear();
             <div className={styles.social}>
               <ul>
                 <li>
-                  <Link to="www.facebook.com">
+                  <Link to="http://www.facebook.com">
                     <FontAwesomeIcon
                       icon={faFacebook}
                       style={{ color: "#0f67ff" }}
@@ -44,7 +44,7 @@ const currentYear = currentDate.getFullYear();
                   </Link>
                 </li>
                 <li>
-                  <Link to="www.twitter.com">
+                  <Link to="http://www.twitter.com">
                     <FontAwesomeIcon
                       icon={faTwitter}
                       style={{ color: "#196af5" }}
@@ -53,7 +53,7 @@ const currentYear = currentDate.getFullYear();
                   </Link>
                 </li>
                 <li>
-                  <Link to="www.instagram.com">
+                  <Link to="http://www.instagram.com">
                     <FontAwesomeIcon
                       icon={faInstagram}
                       className={`${styles["social-icon"]} ${styles.instagram}`}
@@ -66,7 +66,7 @@ const currentYear = currentDate.getFullYear();
           <div className={styles["second-col"]}>
             <ul>
               <li>
-                <Link to="" className={styles.link}>
+                <Link to="/about" className={styles.link}>
                   About us
                 </Link>
               </li>
@@ -76,8 +76,8 @@ const currentYear = currentDate.getFullYear();
                 </Link>
               </li>
               <li>
-                <Link to="" className={styles.link}>
-                  Member Services
+                <Link to="/benefits" className={styles.link}>
+                  Member Benefits
                 </Link>
               </li>
               <li>
@@ -86,17 +86,17 @@ const currentYear = currentDate.getFullYear();
                 </Link>
               </li>
               <li>
-                <Link to="" className={styles.link}>
+                <Link to="/directory" className={styles.link}>
                   Member Directory
                 </Link>
               </li>
               <li>
-                <Link to="" className={styles.link}>
+                <Link to="/news" className={styles.link}>
                   News
                 </Link>
               </li>
               <li>
-                <Link to="" className={styles.link}>
+                <Link to="/event" className={styles.link}>
                   Events
                 </Link>
               </li>
@@ -106,7 +106,7 @@ const currentYear = currentDate.getFullYear();
                 </Link>
               </li>
               <li>
-                <Link to="" className={styles.link}>
+                <Link to="/contact" className={styles.link}>
                   Contact us
                 </Link>
               </li>
@@ -145,8 +145,8 @@ const currentYear = currentDate.getFullYear();
           </div>
         </div>
         <div className={styles.copyright}>
-          &copy; {currentYear} MANEG, All Rights Reserved | Privacy Policy, Terms of
-          Service & Cookie settings
+          &copy; {currentYear} MANEG, All Rights Reserved | Privacy Policy,
+          Terms of Service & Cookie settings
         </div>
       </div>
     </section>
