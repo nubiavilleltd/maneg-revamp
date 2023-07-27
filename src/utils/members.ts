@@ -23,7 +23,7 @@ function generateRandomLogo() {
   return logos[Math.floor(Math.random() * logos.length)];
 }
 
-// Function to generate a random company name
+// Function to generate a random company name ...
 function generateRandomCompanyName() {
   const companyNames = [
     "FictiCorp",
