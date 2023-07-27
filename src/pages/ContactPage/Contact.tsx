@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 // import { VscArrowDown } from "react-icons/vsc";
 import ReactCurvedText from "react-curved-text";
+import Transition from "../../utils/Transistion/Transition";
 
 const Contact = () => {
   return (
@@ -142,4 +143,8 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+const TransitionContact = () => {
+  return <Transition OgComponent={<Contact />} />;
+};
+
+export default TransitionContact;

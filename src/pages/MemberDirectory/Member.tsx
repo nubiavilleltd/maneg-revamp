@@ -19,7 +19,7 @@ type Props = {
 const Member = ({ index, logo, address, company, description, id }: Props) => {
   return (
     <>
-      <div className={styles["individual-member"]}>
+      <Link to={`/directory/${id}`} className={styles["individual-member"]}>
         <div>{index + 1}</div>
         <img src={logo} className={styles["member-logo"]} />
         <div className={styles["member-details"]}>
@@ -51,7 +51,7 @@ const Member = ({ index, logo, address, company, description, id }: Props) => {
             />
           </Link>
         </div>
-      </div>
+      </Link>
     </>
   );
 };

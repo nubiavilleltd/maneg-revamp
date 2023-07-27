@@ -24,6 +24,7 @@ import { service } from "./service";
 import CountUp from "react-countup";
 import Newsletter from "./Newsletter/Newsletter";
 import { Link } from "react-router-dom";
+import Transition from "../../utils/Transistion/Transition";
 
 const Home = () => {
   return (
@@ -296,4 +297,8 @@ const Home = () => {
   );
 };
 
-export default Home;
+const TransitionHome = () => {
+  return <Transition OgComponent={<Home />} />;
+};
+
+export default TransitionHome;

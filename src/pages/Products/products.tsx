@@ -1,11 +1,11 @@
-
 import styles from "./products.module.scss";
 import { useEffect, useState } from "react";
 import { ProductsData } from "./data/productData";
 import { Link } from "react-router-dom";
+import Transition from "../../utils/Transistion/Transition";
 
-const Products = () =>{
-    const [searchQuery, setSearchQuery] = useState("");
+const Products = () => {
+  const [searchQuery, setSearchQuery] = useState("");
   const [allProducts, setAllProducts] = useState(ProductsData);
 
   useEffect(() => {
@@ -14,8 +14,8 @@ const Products = () =>{
     );
     setAllProducts(filteredProducts);
   }, [searchQuery]);
-return(
- <section className={styles.product}>
+  return (
+    <section className={styles.product}>
       <div className={styles.wrapper}>
         <div className={styles.heading}>
           <p style={{ fontWeight: "700", fontSize: "1.3rem" }}>Products</p>
@@ -56,7 +56,6 @@ return(
                 />
                 <div className={styles["content__wrap"]}>
                   <p className={styles.title}>{products.title}</p>
-                 
                 </div>
               </Link>
             ))}
@@ -64,7 +63,11 @@ return(
         )}
       </div>
     </section>
-)
-}
+  );
+};
 
-export default Products
+const TransitionProducts = () => {
+  return <Transition OgComponent={<Products />} />;
+};
+
+export default TransitionProducts;

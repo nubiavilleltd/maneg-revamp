@@ -66,7 +66,7 @@ const Navbar = () => {
                   >
                     Member Directory
                   </Link>
-                  <Link to="" className={styles["dropdown-content-3"]}>
+                  <Link to="/benefits" className={styles["dropdown-content-3"]}>
                     Member Benefits
                   </Link>
                   <Link to="" className={styles["dropdown-content-4"]}>
@@ -91,7 +91,10 @@ const Navbar = () => {
             </div>
           </li>
           <li>
-            <Link to="/products" className={isScrolled ? `${styles.scrolledLink}` : ""}>
+            <Link
+              to="/products"
+              className={isScrolled ? `${styles.scrolledLink}` : ""}
+            >
               Products
             </Link>
           </li>

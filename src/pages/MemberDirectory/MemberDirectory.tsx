@@ -4,6 +4,7 @@ import members from "../../utils/members";
 import Member from "./Member";
 import Pagination from "../../components/UI/Pagination/Pagination";
 import { useState } from "react";
+import Transition from "../../utils/Transistion/Transition";
 
 const MemberDirectory = () => {
   const handleMemberFormHandler = () => {
@@ -91,4 +92,8 @@ const MemberDirectory = () => {
   );
 };
 
-export default MemberDirectory;
+const TransitionMemberDirectory = () => {
+  return <Transition OgComponent={<MemberDirectory />} />;
+};
+
+export default TransitionMemberDirectory;

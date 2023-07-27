@@ -76,8 +76,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="" className={styles.link}>
-                  Member Services
+                <Link to="/benefits" className={styles.link}>
+                  Member Benefits
                 </Link>
               </li>
               <li>

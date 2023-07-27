@@ -1,5 +1,5 @@
 import styles from "./MemberBenefits.module.scss";
-import Transition from "../../utils/transistion";
+import Transition from "../../utils/Transistion/Transition";
 import senate from "../../assets/senate.jpg";
 import exportMoney from "../../assets/export-money.jpg";
 import Button from "../../components/UI/Button/Button";
