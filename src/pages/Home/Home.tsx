@@ -1,6 +1,6 @@
 import styles from "./Home.module.scss";
 import Button from "../../components/UI/Button/Button";
-// import heroImg from "../../assets/hero-image.jpg";
+import heroImg from "../../assets/hero-image.jpg";
 // import cacLogo from "../../assets/cac_logo.png";
 // import manLogo from "../../assets/man_logo2 (1).png";
 import aboutImg from "../../assets/about-hero-img.jpg";
@@ -11,7 +11,6 @@ import plant from "../../assets/plant.jpg";
 // import logo from "../../assets/logo.png";
 // import { Link } from "react-router-dom";
 import newsletterImg from "../../assets/newsletter.jpg";
-import exportVideo from "../../assets/export.mp4";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowRight,
@@ -55,39 +54,9 @@ const Home = () => {
           </div>
         </div>
         <div className={styles["hero-image"]}>
-          {/* <img src={heroImg} loading="lazy" alt="hero-image" /> */}
-          <video autoPlay controls loop>
-            <source src={exportVideo} type="video/mp4" />
-          </video>
+          <img src={heroImg} loading="lazy" alt="hero-image" />
         </div>
       </div>
-      {/* <div className={styles["hero-logo"]}>
-        <ul>
-          <li>
-            <Link to="" className={styles.logo}>
-              <img src={cacLogo} alt="Cooperate Assocation Council" />
-            </Link>
-          </li>
-          <li>
-            <Link to="" className={styles.logo}>
-              <img src={manLogo} alt="Manufacturers Assocaition of Nigeria" />
-            </Link>
-          </li>
-          <li>
-            <Link to="" className={styles.logo}>
-              <img
-                src={logo}
-                alt="Manufacturers Assocation of Nigeria Export Promotion Group"
-              />
-            </Link>
-          </li>
-          <li>
-            <Link to="" className={styles.logo}>
-              Nextportrade
-            </Link>
-          </li>
-        </ul>
-      </div> */}
 
       <section className={styles.support}>
         <div>
